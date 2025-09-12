@@ -18,13 +18,13 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Run Tests
-        run: yarn test
-
       - name: Build Package
         run: yarn build
         env:
           NODE_ENV: production
+          
+      - name: Run Tests
+        run: yarn test
 
   publish-npm:
     needs: build-and-test
