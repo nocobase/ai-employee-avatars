@@ -45,15 +45,18 @@ jobs:
                 
       - name: Publish
         run: |
-          if [ -z "$NPM_TOKEN" ]; then
-            echo "❌ NPM_TOKEN is empty or not set"
-            exit 1
-          else
-            echo "✅ NPM_TOKEN is set (length: ${#NPM_TOKEN})"
-            echo "First 4 chars: ${NPM_TOKEN:0:4}****"
-          fi
           npm config set provenance true
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-          npm publish --access public
+          if git log -1 --pretty=%B | grep "^[0-9]\+\.[0-9]\+\.[0-9]\+$";
+          then
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+            npm publish --access public
+          elif git log -1 --pretty=%B | grep "^[0-9]\+\.[0-9]\+\.[0-9]\+";
+          then
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+            npm publish --tag next --access public
+          else
+            echo "Not a release, skipping publish"
+          fi
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
