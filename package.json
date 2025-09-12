@@ -3,16 +3,14 @@
   "version": "1.0.0",
   "description": "Avatar style for DiceBear",
   "keywords": [
+    "nocobase",
     "dicebear"
   ],
-  "bugs": {
-    "url": "https://github.com/dicebear/dicebear/issues"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dicebear/dicebear.git"
+    "url": "git+https://github.com/nocobase/ai-employee-avatars.git"
   },
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "type": "module",
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
