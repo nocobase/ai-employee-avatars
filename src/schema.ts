@@ -169,6 +169,18 @@ export const schema: StyleSchema = {
         "woman012"
       ]
     },
+    "mask": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "dark"
+        ]
+      },
+      "default": [
+        "dark"
+      ]
+    },
     "mouth": {
       "type": "array",
       "items": {

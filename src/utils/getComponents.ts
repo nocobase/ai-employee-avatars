@@ -44,6 +44,11 @@ export function getComponents({ prng, options }: Props): ComponentPickCollection
     group: 'mouth',
     values: options.mouth,
   });
+  const maskComponent = pickComponent({
+    prng,
+    group: 'mask',
+    values: options.mask,
+  });
 
   return {
     'base': baseComponent,
@@ -52,5 +57,6 @@ export function getComponents({ prng, options }: Props): ComponentPickCollection
     'earing': earingComponent,
     'glasses': glassesComponent,
     'mouth': mouthComponent,
+    'mask': maskComponent,
   }
 };
