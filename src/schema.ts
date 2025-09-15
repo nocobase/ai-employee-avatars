@@ -174,11 +174,13 @@ export const schema: StyleSchema = {
       "items": {
         "type": "string",
         "enum": [
-          "dark"
+          "dark",
+          "dark2"
         ]
       },
       "default": [
-        "dark"
+        "dark",
+        "dark2"
       ]
     },
     "mouth": {

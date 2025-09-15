@@ -75,6 +75,7 @@ export interface Options {
   )[];
   mask?: (
     | 'dark'
+    | 'dark2'
   )[];
 }
 

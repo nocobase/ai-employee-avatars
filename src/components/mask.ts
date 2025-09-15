@@ -9,4 +9,5 @@ import type { ComponentGroup, ComponentPickCollection, ColorPickCollection } fro
 
 export const mask: ComponentGroup = {
   'dark': (components: ComponentPickCollection, colors: ColorPickCollection) => `<path d="M320 160C320 71.634 248.366 0 160 0S0 71.634 0 160s71.634 160 160 160 160-71.634 160-160" fill="black" fill-opacity="0.6"/>`,
+  'dark2': (components: ComponentPickCollection, colors: ColorPickCollection) => `<path d="M320 160C320 71.634 248.366 0 160 0S0 71.634 0 160s71.634 160 160 160 160-71.634 160-160" fill="black" fill-opacity="0.8"/>`,
 }
