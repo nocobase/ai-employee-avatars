@@ -10,3 +10,4 @@ export { clothes } from './clothes.js';
 export { earing } from './earing.js';
 export { glasses } from './glasses.js';
 export { mouth } from './mouth.js';
+export { mask } from './mask.js';

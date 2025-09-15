@@ -73,6 +73,9 @@ export interface Options {
   mouth?: (
     | 'unisex001'
   )[];
+  mask?: (
+    | 'dark'
+  )[];
 }
 
 export type ColorPickCollection = Record<string, string>;
